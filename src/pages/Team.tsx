@@ -1,56 +1,22 @@
 import React from 'react';
-import { Mail, Linkedin } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import rajnijoshi from '../assets/rajnijoshi.jpg';
+import neetukanduliya from '../assets/neetukanduliya.jpg';
 
 const Team: React.FC = () => {
   const teamMembers = [
     {
-      name: 'Dr. Priya Sharma',
-      role: 'Founder & Director',
-      image: 'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg',
-      bio: 'An experienced educator with 15+ years in community development and educational policy. Dr. Sharma holds a PhD in Education and has been instrumental in designing our curriculum.',
-      email: 'priya@shikshaseshikhar.org',
-      linkedin: '#'
+      name: 'Rajni Dhoundiyal Joshi',
+      role: 'Founder & President',
+      image: rajnijoshi,
+      phone: '',
     },
     {
-      name: 'Rajesh Kumar',
-      role: 'Program Director',
-      image: 'https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg',
-      bio: 'A passionate advocate for rural education with extensive experience in project management and community outreach. Rajesh oversees all our field operations.',
-      email: 'rajesh@shikshaseshikhar.org',
-      linkedin: '#'
+      name: 'Neetu Kanduliya',
+      role: 'Vice President',
+      image: neetukanduliya,
+      phone: '',
     },
-    {
-      name: 'Anjali Patel',
-      role: 'Head of Operations',
-      image: 'https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg',
-      bio: 'With a background in nonprofit management and logistics, Anjali ensures smooth operations across all our centers and coordinates with various stakeholders.',
-      email: 'anjali@shikshaseshikhar.org',
-      linkedin: '#'
-    },
-    {
-      name: 'Dr. Manoj Singh',
-      role: 'Curriculum Development Lead',
-      image: 'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg',
-      bio: 'Former university professor turned education innovator. Dr. Singh develops our teaching methodologies and training programs for educators.',
-      email: 'manoj@shikshaseshikhar.org',
-      linkedin: '#'
-    },
-    {
-      name: 'Sunita Devi',
-      role: 'Community Outreach Manager',
-      image: 'https://images.pexels.com/photos/3769146/pexels-photo-3769146.jpeg',
-      bio: 'A grassroots activist with deep understanding of rural communities. Sunita builds relationships with local leaders and ensures community participation.',
-      email: 'sunita@shikshaseshikhar.org',
-      linkedin: '#'
-    },
-    {
-      name: 'Vikram Joshi',
-      role: 'Technology Coordinator',
-      image: 'https://images.pexels.com/photos/3778603/pexels-photo-3778603.jpeg',
-      bio: 'Tech enthusiast dedicated to bridging the digital divide. Vikram manages our digital literacy programs and maintains our technology infrastructure.',
-      email: 'vikram@shikshaseshikhar.org',
-      linkedin: '#'
-    }
   ];
 
   return (
@@ -95,26 +61,20 @@ const Team: React.FC = () => {
                     <div className="p-6 w-full">
                       <div className="flex space-x-4">
                         <a
-                          href={`mailto:${member.email}`}
+                          href={`mailto:${member.phone}`}
                           className="bg-white/90 p-2 rounded-full hover:bg-white transition-colors duration-200"
                         >
-                          <Mail className="h-5 w-5 text-gray-700" />
+                          <Phone className="h-5 w-5 text-gray-700" />
                         </a>
-                        <a
-                          href={member.linkedin}
-                          className="bg-white/90 p-2 rounded-full hover:bg-white transition-colors duration-200"
-                        >
-                          <Linkedin className="h-5 w-5 text-blue-600" />
-                        </a>
+                        
                       </div>
                     </div>
                   </div>
                 </div>
-                
+              
                 <div className="p-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-orange-600 font-semibold mb-4">{member.role}</p>
-                  <p className="text-gray-600 leading-relaxed">{member.bio}</p>
                 </div>
               </div>
             ))}
@@ -136,13 +96,7 @@ const Team: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:careers@shikshaseshikhar.org"
-                className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:shadow-xl"
-              >
-                View Open Positions
-              </a>
-              <a
-                href="mailto:volunteer@shikshaseshikhar.org"
+                href="mailto:shikshaseshikhartak.gmail.com"
                 className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
               >
                 Volunteer With Us
