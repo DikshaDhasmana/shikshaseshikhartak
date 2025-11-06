@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, Facebook, Twitter, Instagram } from 'lucide-react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+// Fix for default markers in react-leaflet
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+});
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -11,9 +22,7 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
-    // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' });
     alert('Thank you for your message! We will get back to you soon.');
   };
@@ -166,9 +175,9 @@ const Contact: React.FC = () => {
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>
                       <p className="text-gray-600">
-                        123 Education Street,<br />
-                        Connaught Place,<br />
-                        New Delhi, India 110001
+                        Sector 2C/256, First Floor<br />
+                        Near Mewar Institute, Vasundhara<br />
+                        Ghaziabad, Uttar Pradesh - 201012
                       </p>
                     </div>
                   </div>
@@ -191,22 +200,13 @@ const Contact: React.FC = () => {
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-6">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <a
-                    href="#"
-                    className="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-colors duration-200"
-                  >
+                  <a href="#" className="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-colors duration-200">
                     <Facebook className="h-6 w-6" />
                   </a>
-                  <a
-                    href="#"
-                    className="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition-colors duration-200"
-                  >
+                  <a href="#" className="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition-colors duration-200">
                     <Twitter className="h-6 w-6" />
                   </a>
-                  <a
-                    href="#"
-                    className="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition-colors duration-200"
-                  >
+                  <a href="#" className="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition-colors duration-200">
                     <Instagram className="h-6 w-6" />
                   </a>
                 </div>
@@ -224,20 +224,30 @@ const Contact: React.FC = () => {
               Find Us on the Map
             </h2>
             <p className="text-xl text-gray-600">
-              Located in the heart of New Delhi, easily accessible by metro and public transport.
+              Located in Vasundhara, Ghaziabad — easily accessible by metro and public transport.
             </p>
           </div>
 
           <div className="bg-gray-200 rounded-2xl overflow-hidden shadow-xl">
-            <div className="h-96 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-                <p className="text-lg text-gray-700 font-medium">Interactive Map</p>
-                <p className="text-gray-600">
-                  123 Education Street, Connaught Place, New Delhi
-                </p>
-              </div>
-            </div>
+            <MapContainer
+              center={[28.66875, 77.37558]} // actual coordinates
+              zoom={16}
+              style={{ height: '400px', width: '100%' }}
+              scrollWheelZoom={false}
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <Marker position={[28.66875, 77.37558]}>
+                <Popup>
+                  Shiksha Se Shikhar Tak<br />
+                  Sector 2C/256, First Floor<br />
+                  Near Mewar Institute, Vasundhara<br />
+                  Ghaziabad, Uttar Pradesh - 201012
+                </Popup>
+              </Marker>
+            </MapContainer>
           </div>
         </div>
       </section>
