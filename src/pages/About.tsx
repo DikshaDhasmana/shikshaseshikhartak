@@ -3,18 +3,20 @@ import { Users, Target, Award, TrendingUp, BookOpen, Heart, Globe, Lightbulb } f
 
 const About: React.FC = () => {
   const milestones = [
-    { year: '2015', event: 'Founded with a vision to transform education' },
-    { year: '2017', event: 'Reached 1,000 students across 10 communities' },
-    { year: '2019', event: 'Launched digital literacy programs' },
-    { year: '2021', event: 'Established 50+ learning centers' },
-    { year: '2023', event: 'Impacted 10,000+ lives through various programs' },
-    { year: '2024', event: 'Expanded to 150+ communities nationwide' }
+    { year: '2015', event: 'Idea conceived; informal teaching sessions and awareness campaigns initiated' },
+    { year: '2016', event: 'Officially registered as NGO; began formal operations with focus on free primary education' },
+    { year: '2017-2018', event: 'Expanded to distribution of school supplies; early collaborations with volunteers' },
+    { year: '2019', event: 'Introduced counselling for children affected by drug abuse and neglect' },
+    { year: '2020', event: 'Adapted to COVID-19; supported remote learning and relief distribution' },
+    { year: '2021', event: 'Initiated women empowerment programs including self-defense training' },
+    { year: '2022-2023', event: 'Gained community recognition; strengthened digital presence' },
+    { year: '2024-Present', event: 'Scaling initiatives for holistic development; building partnerships' }
   ];
 
   const stats = [
-    { icon: Users, number: '10,000+', label: 'Students Educated', color: 'text-blue-600' },
-    { icon: BookOpen, number: '150+', label: 'Communities Served', color: 'text-green-600' },
-    { icon: Award, number: '50+', label: 'Learning Centers', color: 'text-purple-600' },
+    { icon: Users, number: '1000+', label: 'Children Educated', color: 'text-blue-600' },
+    { icon: BookOpen, number: '50+', label: 'Communities Served', color: 'text-green-600' },
+    { icon: Award, number: '200+', label: 'Women Empowered', color: 'text-purple-600' },
     { icon: TrendingUp, number: '95%', label: 'Success Rate', color: 'text-orange-600' }
   ];
 

@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg)',
+          backgroundImage: 'url(https://shikshaseshikhartak.org/wp-content/uploads/2023/03/banner-children.jpg)',
         }}
       >
         <div className="absolute inset-0 bg-blue-900 bg-opacity-75"></div>
@@ -24,8 +24,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Empowering communities through education and sustainable development. 
-            Join us in our mission to create lasting change and build a brighter future for all.
+            Providing free and quality education to underprivileged children from slums, economically weaker sections, and marginalized communities. Empowering women through self-defense training, counselling, and skill development. Join us in bridging educational gaps and building a brighter future for all.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -50,17 +49,17 @@ const Hero: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-center">
-              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">10,000+</div>
-              <div className="text-white font-medium">Students Educated</div>
+              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">1000+</div>
+              <div className="text-white font-medium">Children Educated</div>
             </div>
             
             <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-center">
-              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">150+</div>
+              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">200+</div>
               <div className="text-white font-medium">Communities Served</div>
             </div>
             
             <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-center">
-              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">50+</div>
+              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">30+</div>
               <div className="text-white font-medium">Active Programs</div>
             </div>
           </div>
