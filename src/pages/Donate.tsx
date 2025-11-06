@@ -1,57 +1,34 @@
-import React, { useState } from 'react';
-import { Heart, Shield, CheckCircle, Users, BookOpen, Home, CreditCard, Smartphone, Building } from 'lucide-react';
+import React from 'react';
+import { Heart, Users, BookOpen, Home } from 'lucide-react';
+import donationqr from '../assets/donationqr.jpg'; // 👈 add your QR image in assets folder
 
 const Donate: React.FC = () => {
-  const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
-  const [customAmount, setCustomAmount] = useState('');
-  const [donationType, setDonationType] = useState<'monthly' | 'one-time'>('one-time');
-
-  const predefinedAmounts = [500, 1000, 2500, 5000, 10000];
-
   const impactAreas = [
     {
       icon: BookOpen,
       title: 'Education Support',
       description: 'Provide books, stationery, and learning materials to underprivileged children.',
-      percentage: 45
+      percentage: 45,
     },
     {
       icon: Users,
       title: 'Teacher Training',
       description: 'Professional development programs for educators in rural communities.',
-      percentage: 25
+      percentage: 25,
     },
     {
       icon: Home,
       title: 'Infrastructure',
       description: 'Building and maintaining learning centers and digital labs.',
-      percentage: 20
+      percentage: 20,
     },
     {
       icon: Heart,
       title: 'Community Programs',
       description: 'Health, nutrition, and family support initiatives.',
-      percentage: 10
-    }
+      percentage: 10,
+    },
   ];
-
-  const donationImpacts = [
-    { amount: 500, impact: 'Provides school supplies for 5 children for a month' },
-    { amount: 1000, impact: 'Sponsors a child\'s education for 2 months' },
-    { amount: 2500, impact: 'Funds a teacher\'s training workshop' },
-    { amount: 5000, impact: 'Sets up a basic learning center' },
-    { amount: 10000, impact: 'Sponsors a complete digital literacy program' }
-  ];
-
-  const getSelectedAmountValue = () => {
-    return selectedAmount || parseInt(customAmount) || 0;
-  };
-
-  const getImpactDescription = () => {
-    const amount = getSelectedAmountValue();
-    const impact = donationImpacts.find(item => item.amount <= amount);
-    return impact ? impact.impact : 'Your contribution will make a significant difference';
-  };
 
   return (
     <div className="pt-16">
@@ -72,145 +49,42 @@ const Donate: React.FC = () => {
         </div>
       </section>
 
-      {/* Donation Form */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-            <div className="p-8 md:p-12">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Choose Your Contribution
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Select an amount below or enter a custom donation amount.
-                </p>
-              </div>
+      {/* QR Donation Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Donate Instantly via QR
+          </h2>
+          <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
+            Scan the QR code below to make a quick and secure donation. 
+            Every contribution helps us bring education and hope to more children.
+          </p>
 
-              {/* Donation Type Toggle */}
-              <div className="flex justify-center mb-8">
-                <div className="bg-gray-100 p-1 rounded-full">
-                  <button
-                    onClick={() => setDonationType('one-time')}
-                    className={`px-6 py-3 rounded-full font-semibold transition-all duration-200 ${
-                      donationType === 'one-time'
-                        ? 'bg-orange-500 text-white shadow-lg'
-                        : 'text-gray-600 hover:text-gray-900'
-                    }`}
-                  >
-                    One-time
-                  </button>
-                  <button
-                    onClick={() => setDonationType('monthly')}
-                    className={`px-6 py-3 rounded-full font-semibold transition-all duration-200 ${
-                      donationType === 'monthly'
-                        ? 'bg-orange-500 text-white shadow-lg'
-                        : 'text-gray-600 hover:text-gray-900'
-                    }`}
-                  >
-                    Monthly
-                  </button>
-                </div>
-              </div>
-
-              {/* Amount Selection */}
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
-                {predefinedAmounts.map((amount) => (
-                  <button
-                    key={amount}
-                    onClick={() => {
-                      setSelectedAmount(amount);
-                      setCustomAmount('');
-                    }}
-                    className={`p-4 rounded-xl border-2 font-semibold text-lg transition-all duration-200 ${
-                      selectedAmount === amount
-                        ? 'border-orange-500 bg-orange-50 text-orange-700'
-                        : 'border-gray-200 hover:border-orange-300 hover:bg-orange-50'
-                    }`}
-                  >
-                    ₹{amount.toLocaleString()}
-                  </button>
-                ))}
-              </div>
-
-              {/* Custom Amount */}
-              <div className="mb-8">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Or enter a custom amount:
-                </label>
-                <div className="relative">
-                  <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-lg">₹</span>
-                  <input
-                    type="number"
-                    value={customAmount}
-                    onChange={(e) => {
-                      setCustomAmount(e.target.value);
-                      setSelectedAmount(null);
-                    }}
-                    placeholder="Enter amount"
-                    className="w-full pl-8 pr-4 py-4 border-2 border-gray-200 rounded-xl text-lg focus:border-orange-500 focus:outline-none"
-                  />
-                </div>
-              </div>
-
-              {/* Impact Description */}
-              {getSelectedAmountValue() > 0 && (
-                <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-6 w-6 text-green-600 mt-1" />
-                    <div>
-                      <h3 className="font-semibold text-green-800 mb-2">Your Impact:</h3>
-                      <p className="text-green-700">{getImpactDescription()}</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Payment Methods */}
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Payment Methods</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="flex items-center p-4 border-2 border-gray-200 rounded-xl hover:border-orange-300 cursor-pointer">
-                    <CreditCard className="h-6 w-6 text-gray-600 mr-3" />
-                    <span className="font-medium">Credit/Debit Card</span>
-                  </div>
-                  <div className="flex items-center p-4 border-2 border-gray-200 rounded-xl hover:border-orange-300 cursor-pointer">
-                    <Smartphone className="h-6 w-6 text-gray-600 mr-3" />
-                    <span className="font-medium">UPI/Mobile Wallet</span>
-                  </div>
-                  <div className="flex items-center p-4 border-2 border-gray-200 rounded-xl hover:border-orange-300 cursor-pointer">
-                    <Building className="h-6 w-6 text-gray-600 mr-3" />
-                    <span className="font-medium">Net Banking</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Donate Button */}
-              <button
-                disabled={getSelectedAmountValue() === 0}
-                className={`w-full py-4 rounded-xl font-semibold text-lg transition-all duration-200 ${
-                  getSelectedAmountValue() > 0
-                    ? 'bg-orange-500 text-white hover:bg-orange-600 shadow-lg hover:shadow-xl transform hover:-translate-y-1'
-                    : 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                }`}
-              >
-                {getSelectedAmountValue() > 0
-                  ? `Donate ₹${getSelectedAmountValue().toLocaleString()} ${donationType === 'monthly' ? '/month' : ''}`
-                  : 'Select an amount to continue'
-                }
-              </button>
-
-              {/* Security Note */}
-              <div className="flex items-center justify-center mt-6 text-sm text-gray-500">
-                <Shield className="h-4 w-4 mr-2" />
-                <span>Your payment is secured with 256-bit SSL encryption</span>
-              </div>
+          {/* QR Image */}
+          <div className="flex justify-center mb-10">
+            <div className="bg-gray-100 p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+              <img
+                src={donationqr}
+                alt="Donation QR"
+                className="w-64 h-64 object-contain mx-auto"
+              />
             </div>
           </div>
+
+          {/* Button */}
+          <a
+            href="https://forms.gle/yuSRryChpMuH31mn6" // 👈 replace with your Google Form or donor page
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-orange-600 hover:bg-orange-700 text-white text-lg font-semibold px-8 py-4 rounded-full shadow-md transition-all duration-300"
+          >
+            Fill Donor Details Form
+          </a>
         </div>
       </section>
 
       {/* How Your Donation Helps */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -241,12 +115,10 @@ const Donate: React.FC = () => {
       </section>
 
       {/* Tax Benefits */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-blue-600 rounded-3xl p-12 text-white text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Tax Benefits Available
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Tax Benefits Available</h2>
             <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
               Your donation is eligible for tax deduction under Section 80G of the Income Tax Act. 
               You can claim up to 50% of your donation as a tax deduction.
