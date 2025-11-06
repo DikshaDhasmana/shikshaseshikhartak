@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,12 +20,10 @@ const Navigation: React.FC = () => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <GraduationCap className="h-8 w-8 text-blue-700" />
-            <span className="font-bold text-xl text-gray-800">
-              Shiksha Se Shikhar Tak
-            </span>
+        <div className="flex justify-between items-center h-20">
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="Shiksha Se Shikhar Tak" className="h-16 w-auto" />
+            <span className="text-black font-bold ml-2 text-xl">Shiksha Se Shikhar Tak</span>
           </Link>
 
           {/* Desktop Navigation */}

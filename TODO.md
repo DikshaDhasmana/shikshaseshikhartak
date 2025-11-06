@@ -1,5 +1,5 @@
-# TODO: Update Site Content for Live Domain
+# TODO: Increase Navbar Height
 
-- [x] Update index.html: Change title to 'Shiksha Se Shikhar Tak', add meta description, add canonical URL
-- [x] Update src/components/Hero.tsx: Revise the description paragraph to focus on education for underprivileged children and women empowerment
-- [x] Update src/pages/About.tsx: Update story text, milestones, and stats to match NGO's actual work
+- [x] Edit `src/components/Navigation.tsx` to change the height class from `h-16` to `h-20`
+- [ ] Run the development server to verify the navbar height increase (blocked: no space left on device)
+- [ ] Test responsiveness on different screen sizes (pending verification)

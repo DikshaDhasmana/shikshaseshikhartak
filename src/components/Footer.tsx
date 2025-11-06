@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { GraduationCap, Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const Footer: React.FC = () => {
   return (
@@ -10,8 +11,8 @@ const Footer: React.FC = () => {
           {/* About Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <GraduationCap className="h-8 w-8 text-orange-500" />
-              <span className="font-bold text-xl">Shiksha Se Shikhar Tak</span>
+              <img src={logo} alt="Shiksha Se Shikhar Tak" className="h-12 w-auto" />
+              <span className="font-bold text-l">Shiksha Se Shikhar Tak</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
               Empowering communities through education and sustainable development initiatives.
@@ -55,17 +56,18 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-orange-500" />
-                <span className="text-gray-300">info@shikshaseshikhar.org</span>
+                <span className="text-gray-300">shikshaseshikhartak@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-orange-500" />
-                <span className="text-gray-300">+91 98765 43210</span>
+                <span className="text-gray-300">+91 98990 09330<br/>+91 82870 93100</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-orange-500 mt-1" />
                 <span className="text-gray-300">
-                  123 Education Street,<br />
-                  New Delhi, India 110001
+                  Sector 2C/256, First Floor<br />
+                  Near Mewar Institute, Vasundhara<br />
+                  Ghaziabad, Uttar Pradesh - 201012
                 </span>
               </div>
             </div>
@@ -92,7 +94,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-300">
-            © 2024 Shiksha Se Shikhar Tak. All rights reserved. | 
+            © 2025 Shiksha Se Shikhar Tak. All rights reserved. | 
             <span className="ml-2">Made with ❤️ for Education</span>
           </p>
         </div>

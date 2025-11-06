@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Heart, BookOpen } from 'lucide-react';
+import banner from '../assets/banner.png';
 
 const Hero: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(https://shikshaseshikhartak.org/wp-content/uploads/2023/03/banner-children.jpg)',
+          backgroundImage: banner ? `url(${banner})` : 'none',
         }}
       >
         <div className="absolute inset-0 bg-blue-900 bg-opacity-75"></div>

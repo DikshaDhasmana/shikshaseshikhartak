@@ -49,16 +49,15 @@ const About: React.FC = () => {
                   transform their future.
                 </p>
                 <p>
-                  Founded in 2015 by a group of passionate educators and social workers, our 
-                  organization started with a small learning center in rural Delhi. What began 
-                  as a grassroots initiative has grown into a nationwide movement, touching the 
-                  lives of thousands of children and families.
+                  On July 27, 2015, Shiksha Se Shikar Tak began its journey with a vision to empower lives through education and holistic development. What started in an open field soon became a mission fueled by determination and collective effort.
+
                 </p>
                 <p>
-                  Today, we operate across 150+ communities, running comprehensive programs that 
-                  address not just academic learning, but also digital literacy, skill development, 
-                  and community empowerment. Our holistic approach ensures that education becomes 
-                  a catalyst for sustainable development.
+                  From pooling personal resources to provide educational materials, health
+awareness, and skill development training, our members have tirelessly worked to overcome every challenge. Today, our initiative also supports sanitation awareness and employment opportunities, fostering growth and empowerment at every level.
+                </p>
+                <p>
+                  Our journey stands as a testament to the belief that education and empowerment unlock limitless potential — building brighter futures, one step at a time.
                 </p>
               </div>
             </div>
