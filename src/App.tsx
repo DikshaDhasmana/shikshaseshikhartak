@@ -6,7 +6,7 @@ import About from './pages/About';
 import Team from './pages/Team';
 import Donate from './pages/Donate';
 import Contact from './pages/Contact';
-import Events from './pages/Events';
+import Initiatives from './pages/Initiatives';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/initiatives" element={<Initiatives />} />
         </Routes>
       </Layout>
     </Router>

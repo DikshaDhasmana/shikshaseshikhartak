@@ -11,7 +11,7 @@ const Navigation: React.FC = () => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/team', label: 'Team' },
-    { path: '/events', label: 'Events' },
+    { path: '/initiatives', label: 'Initiatives' },
     { path: '/contact', label: 'Contact' },
   ];
 
@@ -23,7 +23,7 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center">
             <img src={logo} alt="Shiksha Se Shikhar Tak" className="h-16 w-auto" />
-            <span className="text-black font-bold ml-2 text-xl">Shiksha Se Shikhar Tak</span>
+            <span className="text-black font-bold ml-2 text-xl"> Shiksha Se Shikhar Tak</span>
           </Link>
 
           {/* Desktop Navigation */}
