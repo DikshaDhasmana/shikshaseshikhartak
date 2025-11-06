@@ -49,18 +49,18 @@ const Hero: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-center">
-              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">1000+</div>
+              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">1,00,000+</div>
               <div className="text-white font-medium">Children Educated</div>
             </div>
             
             <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-center">
-              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">200+</div>
-              <div className="text-white font-medium">Communities Served</div>
+              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">5,00,000+</div>
+              <div className="text-white font-medium">Women Empowered</div>
             </div>
             
             <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-center">
-              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">30+</div>
-              <div className="text-white font-medium">Active Programs</div>
+              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">2,00,000+</div>
+              <div className="text-white font-medium">Girls Trained In Self-Defence</div>
             </div>
           </div>
         </div>

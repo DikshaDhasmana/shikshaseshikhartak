@@ -7,6 +7,7 @@ import Team from './pages/Team';
 import Donate from './pages/Donate';
 import Contact from './pages/Contact';
 import Initiatives from './pages/Initiatives';
+import CSR from './pages/CSR';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/csr" element={<CSR />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/initiatives" element={<Initiatives />} />
