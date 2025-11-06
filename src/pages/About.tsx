@@ -110,37 +110,51 @@ awareness, and skill development training, our members have tirelessly worked to
       </section>
 
       {/* Timeline */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Journey Through Time
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Key milestones that mark our growth and the expanding impact of our mission.
-            </p>
-          </div>
+ {/* Timeline */}
+<section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Our Journey Through Time
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Key milestones that mark our growth and the expanding impact of our mission.
+      </p>
+    </div>
 
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-200"></div>
-            
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                  <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:text-right md:pr-8' : 'md:text-left md:pl-8'}`}>
-                    <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <div className="text-2xl font-bold text-blue-600 mb-2">{milestone.year}</div>
-                      <p className="text-gray-700">{milestone.event}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
-                </div>
-              ))}
+    <div className="relative">
+      {/* Vertical line */}
+      <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-200"></div>
+      <div className="md:hidden absolute left-6 w-1 h-full bg-blue-200"></div>
+
+      <div className="space-y-12 relative">
+        {milestones.map((milestone, index) => (
+          <div
+            key={index}
+            className={`flex md:items-center ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'}`}
+          >
+            {/* Connector dot */}
+            <div className="absolute md:left-1/2 md:transform md:-translate-x-1/2 left-5 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
+
+            <div
+              className={`w-full md:w-5/12 ${
+                index % 2 === 0
+                  ? 'md:text-right md:pr-8'
+                  : 'md:text-left md:pl-8'
+              }`}
+            >
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ml-10 md:ml-0">
+                <div className="text-2xl font-bold text-blue-600 mb-2">{milestone.year}</div>
+                <p className="text-gray-700">{milestone.event}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Our Approach */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-orange-50">

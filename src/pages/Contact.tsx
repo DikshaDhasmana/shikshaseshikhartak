@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Clock, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Facebook, Linkedin } from 'lucide-react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -45,8 +45,7 @@ const Contact: React.FC = () => {
                 <Mail className="h-7 w-7 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-gray-600">info@shikshaseshikhar.org</p>
-              <p className="text-gray-600">support@shikshaseshikhar.org</p>
+              <p className="text-gray-600">shikshaseshikhartak@gmail.com</p>
             </div>
 
             {/* Phone */}
@@ -55,8 +54,7 @@ const Contact: React.FC = () => {
                 <Phone className="h-7 w-7 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
-              <p className="text-gray-600">+91 98765 43210</p>
-              <p className="text-gray-600">+91 87654 32109</p>
+              <p className="text-gray-600">+91 98990 09330, +91 82870 93100</p>
             </div>
 
             {/* Address */}
@@ -89,22 +87,16 @@ const Contact: React.FC = () => {
             <h3 className="text-xl font-semibold text-gray-900 mb-6">Follow Us</h3>
             <div className="flex justify-center space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/ShikshaSeShikharTak/"
                 className="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-colors duration-200"
               >
                 <Facebook className="h-6 w-6" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/shiksha-se-shikhar-tak-ngo"
                 className="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition-colors duration-200"
               >
-                <Twitter className="h-6 w-6" />
-              </a>
-              <a
-                href="#"
-                className="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition-colors duration-200"
-              >
-                <Instagram className="h-6 w-6" />
+                <Linkedin className="h-6 w-6" />
               </a>
             </div>
           </div>
