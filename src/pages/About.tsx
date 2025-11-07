@@ -14,10 +14,10 @@ const About: React.FC = () => {
   ];
 
   const stats = [
-    { icon: Users, number: '1,00,000+', label: 'Children Provided With Primary Education', color: 'text-blue-600' },
+    { icon: Users, number: '10,000+', label: 'Children Provided With Primary Education', color: 'text-blue-600' },
     { icon: BookOpen, number: '1,000+', label: 'Children Admitted To Schools For Further Education', color: 'text-green-600' },
     { icon: Award, number: '2,00,000+', label: 'School Girls Provided With Self-Defence Trainings', color: 'text-purple-600' },
-    { icon: TrendingUp, number: '5,00,000+', label: 'Women Empowered Through Upskilling And Awareness Programs', color: 'text-orange-600' }
+    { icon: TrendingUp, number: '5,000+', label: 'Women Empowered Through Upskilling And Awareness Programs', color: 'text-orange-600' }
   ];
 
   return (

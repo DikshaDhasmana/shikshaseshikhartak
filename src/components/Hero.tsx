@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto px-4 sm:px-0">
             <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-5 sm:p-6 text-center">
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-400 mb-1 sm:mb-2">
-                1,00,000+
+                10,000+
               </div>
               <div className="text-sm sm:text-base md:text-lg text-white font-medium">
                 Children Educated
@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
 
             <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-5 sm:p-6 text-center">
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-400 mb-1 sm:mb-2">
-                5,00,000+
+                5,000+
               </div>
               <div className="text-sm sm:text-base md:text-lg text-white font-medium">
                 Women Empowered
