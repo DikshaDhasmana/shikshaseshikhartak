@@ -13,6 +13,7 @@ import rakeshbhandari from '../assets/rakeshbhandari.jpeg';
 import richakhankriyal from '../assets/richakhankriyal.jpeg';
 import shraddhatiwari from '../assets/shraddhatiwari.jpeg';
 import ajaytyagi from '../assets/ajaytyagi.jpeg';
+import narendrapayal from '../assets/narendrapayal.jpeg';
 
 const Team: React.FC = () => {
   const teamMembers = [
@@ -27,6 +28,7 @@ const Team: React.FC = () => {
     { name: 'Rajiv Bhardwaj', role: 'Executive Member', image: rajivbhardwaj, phone: '' },
     { name: 'Rakesh Bhandari', role: 'Executive Member', image: rakeshbhandari, phone: '' },
     { name: 'Richa Khankriyal', role: 'Executive Member', image: richakhankriyal, phone: '' },
+    { name: 'Narendra Singh Payal', role: 'Executive Member', image: narendrapayal, phone: '' },
   ];
 
   return (
