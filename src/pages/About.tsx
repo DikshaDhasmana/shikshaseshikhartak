@@ -1,5 +1,7 @@
 import React from 'react';
 import { Users, Target, Award, TrendingUp, BookOpen, Heart, Globe, Lightbulb } from 'lucide-react';
+import banner from '../assets/banner.png';
+import aboutfounder from '../assets/aboutfounder.jpg';
 
 const About: React.FC = () => {
   const milestones = [
@@ -64,7 +66,7 @@ awareness, and skill development training, our members have tirelessly worked to
             
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg"
+                src={banner}
                 alt="Our story"
                 className="rounded-2xl shadow-2xl"
               />
@@ -76,6 +78,62 @@ awareness, and skill development training, our members have tirelessly worked to
           </div>
         </div>
       </section>
+
+      {/* About the Founder */}
+<section className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      {/* Image on Left */}
+      <div className="relative order-1 lg:order-1">
+        <img
+          src={aboutfounder} // replace with actual image path
+          alt="Rajani Dhoundhiyal Joshi"
+          className="rounded-2xl shadow-2xl object-cover w-full h-full"
+        />
+        <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-4 rounded-xl shadow-lg">
+          <div className="text-xl font-bold">Rajani Dhoundiyal Joshi</div>
+        </div>
+      </div>
+
+      {/* Text on Right */}
+      <div className="order-2 lg:order-2">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          About the Founder
+        </h2>
+        <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+          <p>
+            <span className="font-semibold">Mrs. Rajani Dhoundiyal Joshi</span>, 
+            President and Founder of <span className="font-semibold">Shiksha Se Shikhar Tak (NGO)</span>, 
+            is a dedicated social worker committed to transforming lives through education, empowerment, 
+            and social awareness. With a Master’s in Social Work and a decade of service to society, 
+            she has been at the forefront of several grassroots initiatives that uplift underprivileged 
+            children and women across India.
+          </p>
+          <p>
+            In addition to leading her NGO, she serves as a 
+            <span className="font-semibold"> Member of the Internal Complaints Committee (ICC) </span> 
+            for the prevention of sexual harassment at 
+            <span className="font-semibold"> Dr. RML Hospital</span> and the 
+            <span className="font-semibold"> Red Cross Society Headquarters, New Delhi</span>. 
+            She also extends her communication and outreach expertise as the 
+            <span className="font-semibold"> Media In-Charge of Rotary Club Vaishali </span> 
+            and <span className="font-semibold">Mahakauthig</span>, 
+            promoting social causes and community-driven initiatives.
+          </p>
+          <p>
+            Guided by her belief that <span className="italic">education is the foundation of empowerment</span>, 
+            Mrs. Joshi continues to lead <span className="font-semibold">Shiksha Se Shikhar Tak </span> 
+            with compassion, resilience, and an unyielding vision to create an equitable and educated society. 
+            Her journey is a living example of how dedication and empathy can bring lasting change to communities.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Impact Stats */}
       <section className="py-20 bg-gray-50">
