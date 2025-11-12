@@ -12,7 +12,6 @@ import rajivbhardwaj from '../assets/rajivbhardwaj.jpeg';
 import rakeshbhandari from '../assets/rakeshbhandari.jpeg';
 import richakhankriyal from '../assets/richakhankriyal.jpeg';
 import shraddhatiwari from '../assets/shraddhatiwari.jpeg';
-import ajaytyagi from '../assets/ajaytyagi.jpeg';
 import narendrapayal from '../assets/narendrapayal.jpeg';
 
 const Team: React.FC = () => {
@@ -20,7 +19,6 @@ const Team: React.FC = () => {
     { name: 'Rajani Dhoundiyal Joshi', role: 'Founder & President', image: rajanijoshi, phone: '' },
     { name: 'Neetu Kanduliya', role: 'Vice President', image: neetukanduliya, phone: '' },
     { name: 'Dimpi Bora', role: 'Vice President', image: dimpibora, phone: '' },
-    { name: 'Ajay Tyagi', role: 'General Secretary', image: ajaytyagi, phone: '' },
     { name: 'Shraddha Tiwari', role: 'Secretary', image: shraddhatiwari, phone: '' },
     { name: 'Neeraj Rawat', role: 'Secretary', image: neerajrawat, phone: '' },
     { name: 'Nagendra Pokhriyal', role: 'Treasurer', image: nagendrapokhriyal, phone: '' },
