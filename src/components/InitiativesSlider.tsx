@@ -5,6 +5,7 @@ import gyansurbhi from '../assets/gyansurbhi.png';
 import sashakt from '../assets/sashakt.png';
 import sattvikyatra from '../assets/sattvikyatra.png';
 import shaktiaarogya from '../assets/shaktiaarogya.png';
+import posh from '../assets/posh.jpeg';
 
 const InitiativesSlider: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -34,7 +35,12 @@ const InitiativesSlider: React.FC = () => {
       title: 'Aarohan',
       image: aarohan,
       description: 'Empowering individuals by enhancing their skills and creating meaningful employment opportunities.'
-    },
+    },    
+    {
+      title: 'POSH Training and Compliance',
+      image: posh,
+      description: 'Conducting awareness programs and creating a safe and inclusive workplace.'
+    }
   ];
 
   useEffect(() => {
