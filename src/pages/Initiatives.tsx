@@ -5,6 +5,7 @@ import shaktiaarogya from '../assets/shaktiaarogya.png';
 import sattvikyatra from '../assets/sattvikyatra.png';
 import sashakt from '../assets/sashakt.png';
 import aarohan from '../assets/aarohan.png';
+import posh from '../assets/posh.jpeg';
 
 const Events: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'upcoming' | 'past'>('all');
@@ -45,6 +46,13 @@ const Events: React.FC = () => {
       image: aarohan,
       description:
         'Empowering individuals by enhancing their skills and creating meaningful employment opportunities through vocational and practical training.',
+    },
+    {
+      id: 5,
+      title: 'POSH Training and Compliance',
+      image: posh,
+      description:
+        'Delivered 100+ POSH/POCSO/D&I workshops across corporates and institutions. Building compliant, inclusive & future-ready workplaces.',
     },
   ];
 
