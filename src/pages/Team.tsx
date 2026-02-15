@@ -3,7 +3,6 @@ import { Phone } from 'lucide-react';
 
 // Team images
 import rajanijoshi from '../assets/rajanijoshi.jpeg';
-import neetukanduliya from '../assets/neetukanduliya.jpeg';
 import dimpibora from '../assets/dimpibora.jpeg';
 import bhuvanjoshi from '../assets/bhuvanjoshi.jpeg';
 import nagendrapokhriyal from '../assets/nagendrapokhriyal.jpeg';
@@ -11,15 +10,12 @@ import neerajrawat from '../assets/neerajrawat.jpeg';
 import rajivbhardwaj from '../assets/rajivbhardwaj.jpeg';
 import rakeshbhandari from '../assets/rakeshbhandari.jpeg';
 import richakhankriyal from '../assets/richakhankriyal.jpeg';
-import shraddhatiwari from '../assets/shraddhatiwari.jpeg';
 import narendrapayal from '../assets/narendrapayal.jpeg';
 
 const Team: React.FC = () => {
   const teamMembers = [
     { name: 'Rajani Dhoundiyal Joshi', role: 'Founder & President', image: rajanijoshi, phone: '' },
-    { name: 'Neetu Kanduliya', role: 'Vice President', image: neetukanduliya, phone: '' },
     { name: 'Dimpi Bora', role: 'Vice President', image: dimpibora, phone: '' },
-    { name: 'Shraddha Tiwari', role: 'Secretary', image: shraddhatiwari, phone: '' },
     { name: 'Neeraj Rawat', role: 'Secretary', image: neerajrawat, phone: '' },
     { name: 'Nagendra Pokhriyal', role: 'Treasurer', image: nagendrapokhriyal, phone: '' },
     { name: 'Bhuvan Chand Joshi', role: 'Legal Advisor', image: bhuvanjoshi, phone: '' },
